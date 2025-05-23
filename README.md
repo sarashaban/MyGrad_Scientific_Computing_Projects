@@ -8,7 +8,6 @@ Originally assigned as a Fortran 90 homework, this C++ version was developed upo
 
 - Sparse matrix representation and addition
 - OpenMP parallelism for matrix addition
-- Ready for testing
 
 ## Build
 
