@@ -1,1 +1,26 @@
+# CRS Optimizer with Sparse Matrix  and OpenMP Integration
 
+This project is high-performance C++ implementation of the Controlled Random Search (CRS) algorithm for global optimization, with
+
+- Compressed Row Storage (CRS) style sparse matrix class
+- Modular and object-oriented design
+- OpenMP support for potential parallelism
+
+## Features
+
+- CRS algorithm implementation (Price 1977)
+- SparseMatrix class with CRS structure
+- Logging of function statistics (min, max, mean)
+- MyMatrix.data stores entire cloud per iteration
+- Python script for visualizing optimization progress
+- Extension to large-scale using HPC runs is doable
+
+
+## Visualize (after running)
+
+python plot_crs_cloud_evolution.py
+
+
+## License
+
+MIT License. Educational use encouraged.
