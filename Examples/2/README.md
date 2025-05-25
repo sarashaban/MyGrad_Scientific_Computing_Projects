@@ -1,3 +1,6 @@
+https://people.sc.fsu.edu/~jburkardt/classes/acs2_openmp_2013/acs2_openmp_2013.html
+
+
 g++ -fopenmp -O2 -std=c++11 quad_omp.cpp -o quad
 
 
