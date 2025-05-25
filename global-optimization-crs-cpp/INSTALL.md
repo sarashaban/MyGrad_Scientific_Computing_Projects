@@ -19,7 +19,7 @@ Run the compiled optimizer:
 
 Output:
 - crs_stat.txt : optimization summary (min/max/mean per iteration)
-- MyMatrix.data€”:  full cloud for 2000 iterations
+- MyMatrix.data:  full cloud for 2000 iterations
 
 ## Plotting
 
