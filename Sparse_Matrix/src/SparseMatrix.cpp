@@ -19,19 +19,16 @@ SparseMatrix SparseMatrix::operator+(const SparseMatrix& other) const {
     if (nr != other.nr || nc != other.nc)
         throw std::runtime_error("Matrix size mismatch");
 
-    SparseMatrix result(nr, nc);
+    SparseMatrix result(nr,nc);
     result.ia[0] = 0;
-
+    
     #pragma omp parallel for
     for (int i = 0; i < nr; ++i) {
         std::map<int, double> row_data;
-
-        for (int k = ia[i]; k < ia[i + 1]; ++k)
+        for (int k = ia[i]; k < ia[i+1]; ++k)
             row_data[ja[k]] += a[k];
-
-        for (int k = other.ia[i]; k < other.ia[i + 1]; ++k)
+        for (int k = other.ia[i]; k < other.ia[i+1]; ++k)
             row_data[other.ja[k]] += other.a[k];
-
         #pragma omp critical
         {
             for (const auto& p : row_data) {
@@ -43,7 +40,6 @@ SparseMatrix SparseMatrix::operator+(const SparseMatrix& other) const {
             result.ia[i + 1] = result.ja.size();
         }
     }
-
     result.nel = result.a.size();
     return result;
 }
@@ -63,11 +59,11 @@ void SparseMatrix::print() const {
 void SparseMatrix::saveToFile(const std::string& filename) const {
     std::ofstream out(filename);
     out << nr << " " << nc << " " << nel << "\n";
-    for (size_t i = 0; i < ia.size(); ++i) out << ia[i] << " ";
+    for (size_t i=0; i < ia.size(); ++i) out << ia[i] << " ";
     out << "\n";
-    for (size_t i = 0; i < ja.size(); ++i) out << ja[i] << " ";
+    for (size_t i=0; i < ja.size(); ++i) out << ja[i] << " ";
     out << "\n";
-    for (size_t i = 0; i < a.size(); ++i) out << a[i] << " ";
+    for (size_t i=0; i < a.size(); ++i)  out << a[i] << " ";
     out << "\n";
 }
 
@@ -77,7 +73,7 @@ void SparseMatrix::loadFromFile(const std::string& filename) {
     ia.resize(nr + 1);
     for (int i = 0; i < nr + 1; ++i) in >> ia[i];
     ja.resize(nel);
-    for (int i = 0; i < nel; ++i) in >> ja[i];
+    for (int i = 0; i < nel; ++i) in    >> ja[i];
     a.resize(nel);
-    for (int i = 0; i < nel; ++i) in >> a[i];
+    for (int i = 0; i < nel; ++i) in    >> a[i];
 }
