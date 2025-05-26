@@ -59,11 +59,11 @@ void SparseMatrix::print() const {
 void SparseMatrix::saveToFile(const std::string& filename) const {
     std::ofstream out(filename);
     out << nr << " " << nc << " " << nel << "\n";
-    for (size_t i=0; i < ia.size(); ++i) out << ia[i] << " ";
+    for (size_t i=0; i<ia.size(); ++i) out<<ia[i] << " ";
     out << "\n";
-    for (size_t i=0; i < ja.size(); ++i) out << ja[i] << " ";
+    for (size_t i=0; i<ja.size(); ++i) out<<ja[i] << " ";
     out << "\n";
-    for (size_t i=0; i < a.size(); ++i)  out << a[i] << " ";
+    for (size_t i=0; i<a.size(); ++i)  out<<a[i] << " ";
     out << "\n";
 }
 
