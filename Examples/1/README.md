@@ -1,4 +1,4 @@
-# Team Win/Loss Analyzer â C++ Project
+**Team Win/Loss**
 
 This project processes structured football team data from a text file, calculates each team's *win/loss differential*, and demonstrates basic *C++ programming concepts* such as:
 
@@ -20,7 +20,7 @@ g++ -std=c++11 -O2 team_stats_organized.cpp -o team_stats_organized
 
 
 
-# Run the basic version:
+**Run the basic version:**
 
 ./team_stats
 
