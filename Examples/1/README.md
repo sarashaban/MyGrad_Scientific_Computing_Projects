@@ -1,6 +1,6 @@
 **Team Win/Loss**
 
-This project processes structured football team data from a text file, calculates each team's *win/loss differential*, and demonstrates basic *C++ programming concepts* such as:
+This assignment processes structured football team data from a text file, calculates each team's *win/loss differential*, and demonstrates basic *C++ programming concepts* such as:
 
 - Structs
 - File I/O
