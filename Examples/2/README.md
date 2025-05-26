@@ -1,22 +1,5 @@
 https://people.sc.fsu.edu/~jburkardt/classes/acs2_openmp_2013/acs2_openmp_2013.html
 
-
-g++ -fopenmp -O2 -std=c++11 quad_omp.cpp -o quad
-
-
-export OMP_NUM_THREADS=1
-./quad
-
-export OMP_NUM_THREADS=2
-./quad
-
-export OMP_NUM_THREADS=4
-./quad
-
-export OMP_NUM_THREADS=8
-./quad
-
-
 Tasks:
 The task is to make 4 modifications to the program so that it can take advantage of OpenMP. These changes will involve:
 1. Adding an "include" or "use" statement to get the OpenMP include file.
@@ -33,6 +16,19 @@ export OMP_THREAD_NUM=4
 Run the program 4 times, setting the number of threads to 1, 2, 4 and 8, and recording the value of wall clock time. 
 
 
+g++ -fopenmp -O2 -std=c++11 quad_omp.cpp -o quad
+
+export OMP_NUM_THREADS=1
+./quad
+
+export OMP_NUM_THREADS=2
+./quad
+
+export OMP_NUM_THREADS=4
+./quad
+
+export OMP_NUM_THREADS=8
+./quad
 ************************************************************************
 
  export OMP_NUM_THREADS=1
