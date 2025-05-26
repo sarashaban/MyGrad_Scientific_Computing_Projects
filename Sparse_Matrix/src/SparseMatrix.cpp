@@ -4,8 +4,8 @@
 #include <stdexcept>
 #include <omp.h>
 
-SparseMatrix::SparseMatrix(int rows, int cols) : nr(rows), nc(cols), nel(0) {
-    ia.resize(nr + 1, 0);
+SparseMatrix::SparseMatrix(int rows, int cols) : nr(rows),nc(cols),nel(0) {
+    ia.resize(nr+1, 0);
 }
 
 void SparseMatrix::setData(const std::vector<int>& ia_, const std::vector<int>& ja_, const std::vector<double>& a_) {
@@ -70,10 +70,10 @@ void SparseMatrix::saveToFile(const std::string& filename) const {
 void SparseMatrix::loadFromFile(const std::string& filename) {
     std::ifstream in(filename);
     in >> nr >> nc >> nel;
-    ia.resize(nr + 1);
-    for (int i = 0; i < nr + 1; ++i) in >> ia[i];
+    ia.resize(nr+1);
+    for (int i=0; i<nr+1; ++i) in >> ia[i];
     ja.resize(nel);
-    for (int i = 0; i < nel; ++i) in    >> ja[i];
+    for (int i=0; i<nel; ++i) in  >> ja[i];
     a.resize(nel);
-    for (int i = 0; i < nel; ++i) in    >> a[i];
+    for (int i=0; i<nel; ++i) in  >> a[i];
 }
