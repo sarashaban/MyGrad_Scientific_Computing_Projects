@@ -1,6 +1,7 @@
 https://people.sc.fsu.edu/~jburkardt/classes/acs2_openmp_2013/acs2_openmp_2013.html
 
-Tasks:
+*Tasks:*
+
 The task is to make 4 modifications to the program so that it can take advantage of OpenMP. These changes will involve:
 1. Adding an "include" or "use" statement to get the OpenMP include file.
 2. Calling the OpenMP timer function omp_get_wtime() to initialize the timer measurement wtime.
