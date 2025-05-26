@@ -18,12 +18,12 @@ g++ -std=c++11 -O2 team_stats_organized.cpp -o team_stats_organized
 
 ---
 
-**Run the basic version:**
+*Run the basic version:*
 
 ./team_stats
 
 
-#Run the organized version:
+*Run the organized version:*
 
 ./team_stats_organized
 
@@ -34,7 +34,7 @@ Please enter the name of the input file.
 Filename: data.txt
 
 
-**Output from team_stats**
+*Output from team_stats*
 
 -10
 14
@@ -45,7 +45,7 @@ Filename: data.txt
 -8
 
 
-Output from team_stats_organized
+*Output from team_stats_organized*
 
 Team New England Patriots has win: 3 and 13 losses, then win/loss differential is -10
 Team Buffalo Bills has win: 15 and 1 losses, then win/loss differential is 14
