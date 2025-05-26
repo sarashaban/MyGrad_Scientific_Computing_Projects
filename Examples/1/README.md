@@ -10,13 +10,11 @@ This project processes structured football team data from a text file, calculate
 
 ---
 
-
 g++ -std=c++11 -O2 team_stats.cpp -o team_stats
 
 
 g++ -std=c++11 -O2 team_stats_organized.cpp -o team_stats_organized
 
----
 
 *Run the basic version:*
 
@@ -55,10 +53,5 @@ Team Miami Dolphins has win: 7 and 9 losses, then win/loss differential is -2
 Team Green Bay Packers has win: 11 and 5 losses, then win/loss differential is 6
 Team San Francisco 49ers has win: 4 and 12 losses, then win/loss differential is -8
 
-
----
-
-- This project was created as part of an assignment to demonstrate working with structs, file input, and basic statistics in C++.
-- The organized version is more readable and suitable for end users, while the basic version shows internal numeric results only.
 
 
