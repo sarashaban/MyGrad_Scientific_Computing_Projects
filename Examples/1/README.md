@@ -1,3 +1,26 @@
+g++ -std=c++11 -O2 team_stats.cpp -o team_stats.cpp
+./team_stats.cpp
+
+Please enter the name of the input file.
+Filename:  data.txt
+-10
+14
+2
+4
+-2
+6
+-8
+-10
+14
+2
+4
+-2
+6
+-8
+
+g++ -std=c++11 -O2 team_stats_organized.cpp -o team_stats_organized.cpp
+./team_stats_organized.cpp
+
 Please enter the name of the input file.
 Filename:  data.txt
 
