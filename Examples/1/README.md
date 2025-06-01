@@ -10,16 +10,7 @@ This assignment processes structured football team data from a text file, calcul
 
 ---
 
-g++ -std=c++11 -O2 team_stats.cpp -o team_stats
-
-
 g++ -std=c++11 -O2 team_stats_organized.cpp -o team_stats_organized
-
-
-*Run the basic version:*
-
-./team_stats
-
 
 *Run the organized version:*
 
@@ -30,17 +21,6 @@ You will be prompted to enter the input filename.
 
 Please enter the name of the input file.
 Filename: data.txt
-
-
-*Output from team_stats*
-
--10
-14
-2
-4
--2
-6
--8
 
 
 *Output from team_stats_organized*
